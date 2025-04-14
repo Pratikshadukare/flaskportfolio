@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pratiksha Dukare - Resume</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+  <style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #f2f2f2;
+    }
+
+    .resume {
+        display: flex;
+        max-width: 1000px;
+        margin: 40px auto;
+        background: white;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .left-column {
+        background: #34495e;
+        color: white;
+        width: 35%;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .right-column {
+        width: 65%;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+
+    .profile-pic {
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin: 0 auto 20px;
+        border: 3px solid #1abc9c;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin: 0 0 10px;
+    }
+
+    .title {
+        font-size: 18px;
+        color: #ecf0f1;
+        margin-bottom: 30px;
+    }
+
+    .section {
+        margin-bottom: 30px;
+        text-align: left;
+    }
+
+    .section h3 {
+        font-size: 18px;
+        color: #ecf0f1;
+        border-bottom: 1px solid #ecf0f1;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+
+    .section ul {
+        padding-left: 20px;
+        text-align: left;
+    }
+
+    .section ul li {
+        margin-bottom: 5px;
+    }
+
+    a {
+        color: #1abc9c;
+        text-decoration: none;
+    }
+
+    .right-column .section h3 {
+        color: #34495e;
+        border-color: #34495e;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .resume {
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .left-column, .right-column {
+            width: 100%;
+            padding: 20px;
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+        }
+
+        .title {
+            font-size: 16px;
+        }
+
+        .section h3 {
+            font-size: 16px;
+        }
+    }
+  </style>
+</head>
+<body>
+    <div style="text-align: center; margin-top: 20px;">
+        <button onclick="downloadPDF()" style="padding: 10px 20px; font-size: 16px; background-color: #1abc9c; color: white; border: none; border-radius: 5px; cursor: pointer;">
+          Download as PDF
+        </button>
+    </div>
+  <div class="resume">
+    <div class="left-column">
+      <img src="static/images/avatar.png"  alt="Pratiksha Dukare" class="profile-pic" />
+      <h2>Pratiksha Dukare</h2>
+      <p class="title">Software Developer</p>
+
+      <div class="section">
+        <h3>Contact</h3>
+        <ul>
+          <li><strong>Email:</strong> dukarepratiksha1@gmail.com</li>
+          <li><strong>Phone:</strong> +91 75586 35884</li>
+          <li><strong>LinkedIn:</strong> https://www.linkedin.com/in/pratiksha-dukare-5b4225229 <a href="https://www.linkedin.com/in/pratiksha-dukare-5b4225229" target="_blank">Profile</a></li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Languages</h3>
+        <ul>
+          <li>Hindi</li>
+          <li>English</li>
+          <li>Marathi</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Education</h3>
+        <p><strong>MSc Computer Science</strong><br>Arihant College (2022–2024)</p>
+        <p><strong>BSc Computer Science</strong><br>Samarth College (2019–2022)</p>
+      </div>
+    </div>
+
+    <div class="right-column">
+      <div class="section">
+        <h3>Profile</h3>
+        <p>
+          Highly motivated Software Developer with expertise in Python, JavaScript, Git, SQL, and cloud technologies like AWS and Azure. Proficient in frameworks such as Flask and Django, with hands-on experience in developing APIs, cloud-based services, and automation using Terraform and Jenkins. Strong knowledge of Machine Learning libraries and cloud platforms (AWS, Azure, GCP). Adept at collaborating with teams to build scalable, reliable software solutions.
+        </p>
+      </div>
+
+      <div class="section">
+        <h3>Technical Skills</h3>
+        <ul>
+          <li><strong>Programming:</strong> Python (Flask, PySpark, Pandas, NumPy), JavaScript</li>
+          <li><strong>Big Data:</strong> Kafka, AWS Glue, Airflow</li>
+          <li><strong>Databases:</strong> MySQL, MongoDB, BigQuery</li>
+          <li><strong>Cloud:</strong> AWS (Lambda, EC2, S3, DynamoDB, Kinesis), Azure (VMs, Blob), GCP</li>
+          <li><strong>Infrastructure:</strong> Terraform, CloudFormation, Docker, GitHub</li>
+          <li><strong>Streaming:</strong> Kafka, AWS Kinesis, Spark Streaming</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Experience</h3>
+        <p><strong>Software Developer</strong><br>Applied Cloud Computing | Jan 2023 – Present</p>
+        <ul>
+          <li>Spearheading backend development using Python and JavaScript for multiple cloud-native applications.</li>
+          <li>Built and maintained RESTful APIs with Flask and MySQL to support web and mobile platforms.</li>
+          <li>Integrated OpenAI models to deliver real-time, intelligent chat features, improving customer experience.</li>
+          <li>Designed and deployed AWS Lambda functions for asynchronous processing pipelines.</li>
+          <li>Used Step Functions and DynamoDB to orchestrate scalable serverless workflows.</li>
+          <li>Created reusable Terraform modules for infrastructure as code across AWS, Azure, and GCP environments.</li>
+          <li>Worked with CI/CD pipelines using Jenkins and GitHub Actions to automate build and deployment cycles.</li>
+          <li>Contributed to cost optimization and security hardening through Sentinel policies and AWS Config rules.</li>
+        </ul>
+      </div>
+      
+      <div class="section">
+        <h3>Key Projects</h3>
+      
+        <p><strong>LTI MindTree</strong> – Python Flask API Developer</p>
+        <ul>
+          <li>Developed secure backend APIs using Flask for user authentication and session management.</li>
+          <li>Integrated OpenAI GPT models to enable contextual and responsive chat functionality for customer support portals.</li>
+          <li>Implemented JWT token-based authentication and role-based access control for enhanced security.</li>
+          <li>Improved performance by implementing caching and asynchronous request handling.</li>
+          <li>Worked closely with frontend developers to ensure seamless API integration and faster issue resolution.</li>
+        </ul>
+      
+        <p><strong>CAMS</strong> – Python Developer</p>
+        <ul>
+          <li>Created and deployed AWS Lambda functions to automate ingestion and transformation of financial data at scale.</li>
+          <li>Used AWS Step Functions to manage multi-step workflows with error handling and retries.</li>
+          <li>Integrated DynamoDB for low-latency data storage and query performance improvements.</li>
+          <li>Developed CloudWatch monitoring and custom logs for real-time operational visibility and alerts.</li>
+          <li>Optimized runtime and reduced operational costs by modularizing Lambda functions and using environment variables efficiently.</li>
+        </ul>
+      
+        <p><strong>Axis Bank</strong> – Terraform, Python & CloudFormation Automation Developer</p>
+        <ul>
+          <li>Led the development of infrastructure provisioning using Terraform for multi-cloud (AWS, Azure, GCP) environments.</li>
+          <li>Deployed complex services including EC2, KMS, VPCs, Load Balancers, S3, Blob Storage, and IAM Roles.</li>
+          <li>Wrote custom Sentinel policies to enforce governance, tagging standards, and budget constraints.</li>
+          <li>Automated resource deployments and health checks using AWS Lambda, improving system reliability and reducing manual efforts.</li>
+          <li>Collaborated with DevOps and Security teams to ensure compliance, scalability, and maintainability of infrastructure solutions.</li>
+          <li>Utilized CloudFormation templates and integrated them into CI/CD pipelines for consistent deployment across environments.</li>
+        </ul>
+      </div>
+    </div> 
+    <script>
+      function downloadPDF() {
+        const element = document.querySelector('.resume');
+        const opt = {
+          margin: 0.2,
+          filename: 'Pratiksha_Dukare_Resume.pdf',
+          image: { type: 'jpeg', quality: 0.98 },
+          html2canvas: { scale: 2 },
+          jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+        };
+
+        html2pdf().set(opt).from(element).save().then(() => {
+          alert("✅ PDF downloaded successfully!");
+        }).catch((error) => {
+          console.error("❌ PDF generation failed:", error);
+          alert("❌ PDF download failed. Please try again.");
+        });
+      }
+    </script>
+</body>
+</html>
